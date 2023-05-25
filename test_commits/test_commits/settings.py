@@ -16,7 +16,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'test_commits.testing_web'
+    'test_commits.testing_web',
 ]
 
 MIDDLEWARE = [
@@ -50,8 +50,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'test_commits.wsgi.application'
 
-# Database
-# https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
