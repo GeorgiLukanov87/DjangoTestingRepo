@@ -1,6 +1,6 @@
 from django.urls import path
 
-from test_commits.testing_web.views import index, index_plus, index_plus_name, mix_index
+from test_commits.testing_web.views import index, index_plus, index_plus_name
 
 urlpatterns = (
     path('', index, name='index'),
