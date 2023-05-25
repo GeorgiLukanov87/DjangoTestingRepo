@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit prof form</title>
+</head>
+<body>
+<div>
+    <h1>
+        <a href={% url 'show index' %}>Back to home page</a>
+    </h1>
+</div>
+
+<form action="{% url 'edit professor' pk=id %}" method="post" >
+    {{ form }}
+    {% csrf_token %}
+    <button type="submit">Edit Profile!</button>
+</form>
+
+</body>
+</html>

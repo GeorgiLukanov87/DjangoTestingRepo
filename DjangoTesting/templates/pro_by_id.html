@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="margin: 5%;background-color: #efab92">
+<div>
+    <h1>
+        <a href={% url 'show index' %}>Back to home page</a>
+    </h1>
+</div>
+<h2>Current Professor is: <span style="font-size: 100px;color: red">{{ pro.id }}</span></h2>
+<br>
+<h1>Name of professor : <span style="color: green">{{ pro.name }}</span></h1>
+<h1>Age : {{ pro.age }}</h1>
+<h1>Level : {{ pro.level }}</h1>
+</body>
+</html>

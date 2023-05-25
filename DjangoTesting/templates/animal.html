@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animals</title>
+</head>
+
+<div>
+    <h1>
+        <a href={% url 'show index' %}>Back to home page</a>
+    </h1>
+</div>
+
+<body style="margin: 10% 10%">
+{% for dog in animal %}
+    <h1>{{ dog.name }} is a good boy!</h1>
+    <img src="{{ dog.picture_url }}" alt="{{ dog.name }}" style="height: 300px;width: 500px">
+{% endfor %}
+
+</body>
+</html>

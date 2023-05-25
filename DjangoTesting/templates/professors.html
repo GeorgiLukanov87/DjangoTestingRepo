@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professors List!</title>
+</head>
+<body style="background-color: #adc6f3; display: flex;flex-direction: row">
+<div>
+    <h1>
+        <a href={% url 'show index' %}>Back to home page</a>
+    </h1>
+</div>
+<ul style="list-style: none">
+    {% for prof in professors %}
+        <li style="margin-bottom: 10px; color: #001010; font-size: 35px; font-weight: bold">Name: <span
+                style="color: #46850a">{{ prof.name }}</span></li>
+        <li style="color: coral; font-size: 25px; font-weight: bold">Age: {{ prof.age }}</li>
+        <li style="color: red; font-size: 25px; font-weight: bold">LEVEL: {{ prof.level }}</li>
+        <li style="color: #343402; font-size: 25px; font-weight: bold">ID: {{ prof.id }}</li>
+        <br>
+
+        <a style="text-decoration: none; font-size: 25px; border: 1px solid black;border-radius: 50px;padding: 13px;margin:20px;
+            background-color: black;color: #234ce5;font-weight: bold"
+           href={% url 'edit professor' pk=prof.pk %}> Edit!</a>
+
+        <a style="text-decoration: none;font-size: 25px; border: 1px solid black;border-radius: 50px;padding: 13px;margin:20px;
+            background-color: black;color: red;font-weight: bold"
+           href={% url 'delete professor' pk=prof.pk %}> Delete!</a>
+
+        <a style="height:100px ;justify-items: center; text-decoration: none;font-size: 25px; border: 1px solid #234ce5;border-radius: 50px;padding: 13px;margin:20px;
+            background-color: #001010;color: #57c7c7;font-weight: bold"
+           href={% url 'create professor' %}> Create new!</a>
+        <br>
+        <br>
+
+        <hr>
+
+    {% endfor %}
+
+</ul>
+
+
+</body>
+</html>

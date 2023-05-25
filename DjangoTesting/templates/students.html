@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Students List!</title>
+</head>
+<body style="font-size: large; color: red;background-color: cornflowerblue;margin: 50px">
+
+<div>
+    <h1>
+        <a href={% url 'show index' %}>Back to home page</a>
+    </h1>
+</div>
+
+{% for student in students %}
+
+    {% if student.age %}
+    <h1> Student name: {{ student.name }} age: {{ student.age }}!</h1>
+        {% else %}
+     <h1>Student name: {{ student.name }}!</h1>
+    {% endif %}
+{% endfor %}
+
+</body>
+</html>
