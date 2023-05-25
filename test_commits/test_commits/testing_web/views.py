@@ -14,5 +14,8 @@ def index_plus(request, pk):
 
 
 def index_plus_name(request, name):
-    current_html = f"{BASE_HTML +' Name: '+ name}"
+    current_html = f"{BASE_HTML + ' Name: ' + name}"
     return HttpResponse(current_html)
+
+
+
